@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>Tự học Lập Trình Cùng LHT</title>
+    <link rel="icon" href="http://abctech.vn/wp-content/uploads/2017/06/logo-nen-xanh.jpg" type="image/x-icon" />
+
+</head>
+<body>
+    <header class="header">
+        <ul class="header_list">
+            <li class="header_items header-menu">
+                    <i class="menu-mobile fas fa-bars"></i>
+            </li>
+            <ul class="header_list-mobile">
+
+                <li class="header_items">
+                    <a href="https://lamhuetrung.github.io/index.html">
+                        <i class="fas fa-home"></i>
+                        <span></span>
+                    </a>
+                </li>
+               
+                <li class="header_items">
+                    <a href="#bai-tap">
+                        <i class="fas fa-book"></i>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="header_items">
+                    <a href="https://www.facebook.com/T%E1%BB%B1-h%E1%BB%8Dc-l%E1%BA%ADp-Tr%C3%ACnh-c%C3%B9ng-LHT-110968584718753">
+                        <i class="fas fa-question"></i>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="gird__column-2">
+            <div class="content_LT">
+                <div class="content__BT">
+                    <h1 class="BT__tieu-de">Project</h1>
+                    <span class="BT__noi-dung">Bạn hãy viết chương trình nhập vào bàn phím số nguyên n và hiển thị ra các số lẻ từ n tới 10.</span>
+                    <span class="BT__noi-dung">Ví dụ nếu nhập n = 2 thì chương trình sẽ hiển thị ra màn hình:</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">3 5 7 9</code>
+                    </pre>
+                    <h1 class="BT__tieu-de">Lý Thuyết</h1>
+                    <span class="BT__noi-dung">Ngoài vòng lặp for thì còn có 2 loại basic(cơ bản) nữa đó là vòng lặp While và Do-While. Để không làm các bạn rối thì mình sẽ chia ra làm 4 bài để các bạn dễ dàng nắm các content(nội dung) của từng phần nhé.</span>
+                    <span class="BT__noi-dung">Bài này các bạn có thể làm bằng vòng lặp for như trong bài 3 tui hướng dẫn nhưng tui sẽ giới thiệu đến các bạn một cách làm khác bằng cách sử dụng vòng lặp While.</span>
+                    <span class="BT__noi-dung--TD">Cấu trúc vòng lặp While:</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+while (biểu_thức){
+    // Nếu biểu thức đúng thì thực hiện đoạn code trong khối lệnh này
+}
+                    </code>
+                    </pre>
+                    <span class="BT__noi-dung">Có thể thấy vòng lặp While cũng rất chi là đơn giản, các bạn có thể hiểu cách thức hoạt động của While là khi biểu thức còn đúng thì code trong While sẽ còn chạy.</span>
+                    <span class="BT__noi-dung">Lưu ý: Tương tự như vòng lặp for thì While cũng cần phải có 1 biến tăng hoặc giảm giá trị để tránh trường hợp "vòng lặp vô hạn" - không có điểm dừng. Thay vì viết trên cùng như for thì While sẽ viết ở phía dưới khối code. </span>
+                    <span class="BT__noi-dung--TD">Để hiểu hơn về While các bạn hãy xem qua các ví dụ dưới đây:. </span>
+                    <span class="BT__noi-dung">Ví dụ 1:</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+#include < stdio.h >
+
+int main() {
+    int n = 5;
+    while (n != 0) {
+        printf("%d ", n);
+        n--; // biến giảm - không thể không có
+    }
+    return 0;
+}
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Kết quả khi chạy chương trình trên:</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+5 4 3 2 1
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Đoạn code trên được hiểu đơn giản là: khi n còn khác 0 thì in n ra và giản giá trị của n đi 1, đến khi n = 0 tức là điều kiện không còn đúng nữa ( 0 != 0 => false) thì vòng lặp sẽ kết thúc.</span>
+                    <span class="BT__noi-dung">Ví dụ 2:</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+#include < stdio.h >
+
+int main() {
+    int n = 1;
+    while (n <= 15) {
+        if (n%3 == 0) {
+            printf("%d ", n);
+        }
+        n++;
+    }
+    return 0;
+}
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Kết quả khi chạy chương trình trên:</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+3 6 9 12 15
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Đoạn code trên được hiểu là: khi n còn nhỏ hơn 15 thì thực hiện câu lệnh If. Nếu n chia hết cho 3 thì in n ra màn hình và tăng giá trị của n lên 1 đơn vị và quay lại kiểm tra n có nhỏ hơn 15 hay không....</span>
+                    <span class="BT__noi-dung">Đọc tới đây chắc các bạn cũng hiểu phần nào về cú pháp và các thức hoạt động của vòng lặp While rồi nhỉ ? Nếu chưa thì các bạn có thể xem thêm video hướng dẫn nhé, để "cứng" hơn thì các bạn hãy giải quyết những bài tập phía dưới nhé ! </span>
+                </div>
+            </div>
+            <div class="content__HD">
+                <h1>Vòng lặp While / Do-While </h1>
+                <h1 class="content__HD--item">phần 1: Cấu trúc và các thức hoạt động của vòng lặp While</h1>
+                <video class="video" controls>
+                    <source src="./assets/video/video.webm" type="video/mp4">
+                </video>
+                <a class="btn-next not-next">Bài tiếp theo</a>
+                <div class="container__note">
+                    <h2>Nhắc nhở: có các bài tập nhé.</h2>
+                </div>
+                <div class="container__learn" id="bai-tap">  
+                    <span  class="learn__heading">BÀI TẬP</span>
+                    <div class="learn__content" id="bai-tap">
+                        <div class="learn__ex">
+                            <a class="learn__slide-1 bai-tap">Bài tập 1</a>
+                            <span class="noidung-baitap">
+                                <pre class="BT__output">
+                                    <code class="BT__output">
+Bạn hãy viết chương trình nhập từ bàn phím số nguyên n và hiển thị ra màn hình số các ước số của n.
+Ví dụ nếu nhập n = 12 thì chương trình sẽ hiển thị ra màn hình: 6
+    Giải thích:
+        + Ước của n là các số nhỏ hơn n và lớn hơn 0 mà n chia hết cho nó.
+        + 12 có 6 ước là 1, 2, 3, 4, 6, 12.
+                                    </code>
+                                </pre>
+                            </span>
+                        </div>
+                        <div class="learn__ex">
+                            <a class="learn__slide-1 bai-tap">Bài tập 2</a>
+                            <span class="noidung-baitap">
+                                <pre class="BT__output">
+                                    <code class="BT__output">
+Bạn hãy viết chương trình nhập từ bàn phím hai số nguyên dương a và b.
+Sau đó hiển thị ra màn hình kết quả của a^b(a mũ b).
+Ví dụ:
+    nếu nhập a = 2, b = 3 thì chương trình sẽ hiển thị ra màn hình: 8
+Giải thích:
+    + 2 * 2 * 2 = 8.
+Gợi ý:
+    + tao 1 biến answer(biến để chứa kết quả; answer khác 0 => answer = 1 nhé vì 0 nhân bao nhiêu cũng bằng 0)
+    + dùng vòng lặp While với điều kiện lặp là b > 0 
+    + khi b còn lớn hơn 0 thì answer = answer * a;
+    + giảm b 1 đơn vì và tiep51 tục thực hiện answer *= a
+    ...
+    + cho đến khi b = 0 thì ngừng 
+    => kết quả thu được:
+        Với b = 3:
+        b = 3 > 0 => True => answer = 1 * a = a; giảm b = 2;
+        b = 2 > 0 => True => answer = a * a; giảm b = 1;
+        b = 1 > 0 => True => answer = a * a * a; giảm b = 0;
+        b = 0 > 0 => false => kết thúc , ta được answer = a * a * a (a mũ 3);
+                                    </code>
+                                </pre>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
