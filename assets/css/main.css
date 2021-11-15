@@ -220,4 +220,7 @@
     overflow: auto;
     height: 100%;
 }
-
+.content__HD .content__HD--item {
+    font-size: 23px;
+    color: #257fef;
+}
